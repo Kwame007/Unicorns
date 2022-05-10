@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Layout } from "../../components";
 
 const WriteReview = () => {
+  return (
+    <>
+      <Layout>
+        <h1> Write your reviews here </h1>
+      </Layout>
+    </>
+  );
+};
 
-    return (
-        <div>
-            <h1> Write your reviews here </h1>
-        </div>
-    )
-
-}
-
-export default WriteReview
+export default WriteReview;
