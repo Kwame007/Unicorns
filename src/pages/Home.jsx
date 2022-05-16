@@ -1,15 +1,15 @@
 import React from "react";
-import logo from "../logo.svg";
-import { Layout } from '../components'
+import { Layout } from "../components";
+import ReviewsList from "./reviews/ReviewsList";
 
 const Home = () => {
   return (
     <>
       <Layout>
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p className="text-7xl">Hello Vite + React!</p>
+          {/* <p className="text-7xl">testing</p> */}
         </header>
+        <ReviewsList />
       </Layout>
     </>
   );

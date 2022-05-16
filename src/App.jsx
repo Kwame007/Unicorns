@@ -1,15 +1,13 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
-import Routing from './routing'
+import React from "react";
+import "./App.css";
+import Routing from "./routing";
 
 function App() {
-
   return (
     <div className="App">
       <Routing />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
