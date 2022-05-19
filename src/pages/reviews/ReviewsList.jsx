@@ -4,13 +4,6 @@ import { useQuery, gql } from "@apollo/client";
 // graphql query
 const reviews = gql`
   {
-    universities {
-      id
-      name
-      isApproved
-      slug
-      description
-    }
     reviews {
       reviewSummary
       reviewBy {
@@ -23,6 +16,20 @@ const reviews = gql`
   }
 `;
 
+// show revie author
+const ReviewBy = ({ reviewBy }) => {
+  const [username] = reviewBy;
+  console.log(username);
+  return (
+    <>
+      {!username && <small className="font-bold">@Anon</small>}
+
+      {username && <small className="font-bold">@{username.username}</small>}
+    </>
+  );
+};
+
+// show {@Anon tag} if no username available
 const ReviewsList = () => {
   // query data
   const { loading, error, data } = useQuery(reviews);
@@ -30,15 +37,32 @@ const ReviewsList = () => {
   console.log(data);
 
   return (
-    <div className="container mx-auto mt-6 p-5 flex flex-col justify-center md:flex-row md:flex-wrap">
-      {/* {!loading &&
-        data?.rates.map(({ currency, rate }) => (
-          <div className="p-5 shadow-md flex-1">
-            <p className="text-xl">
-              {currency} : {rate}
-            </p>
-          </div>
-        ))} */}
+    <div className="container mx-auto mt-6 p-5 bg-gray-100">
+      <h2 className="text-3xl font-bold text-center my-12">Recent Reviews</h2>
+      <div className="grid grid-cols-1 gap-8 justify-center items-center w-full hover:cursor-pointer md:grid-cols-3 ">
+        {!loading &&
+          data.reviews.map((review) => (
+            <section className="flex w-full p-5 rounded-lg  drop-shadow-lg bg-white md:flex-1 ">
+              <div className="flex flex-col">
+                <div className="flex">
+                  <h3 className="text-lg font-bold">{review.reviewSummary}</h3>
+                </div>
+                <p className="text-left overflow-auto leading-6 text-gray-400 text-lg py-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+                  vitae eum. Error placeat vel qui magni quia eum odit
+                  excepturi! Autem tenetur architecto, ratione quod nostrum
+                  explicabo sapiente facere perspiciatis?
+                </p>
+                <aside className="flex flex-row justify-start items-center">
+                  <span className="bg-gray-100 p-4 rounded-full mr-5"></span>
+                  <small>
+                    By : <ReviewBy reviewBy={review.reviewBy} />
+                  </small>
+                </aside>
+              </div>
+            </section>
+          ))}
+      </div>
     </div>
   );
 };
