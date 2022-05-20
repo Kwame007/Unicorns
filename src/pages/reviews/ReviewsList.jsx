@@ -44,7 +44,7 @@ const ReviewsList = () => {
         {/* {!error && <h4>error occured 👺</h4>} */}
         {loading && <h3>Loading</h3>}
         {!loading &&
-          data.reviews.map((review) => (
+          data?.reviews?.map((review) => (
             <motion.section
               className="flex w-full p-5 rounded-lg  drop-shadow-lg bg-white md:flex-1 "
               initial={{ scale: 1.5 }}
