@@ -1,40 +1,49 @@
-import { gql } from '@apollo/client'
+import { gql } from "@apollo/client";
 
 const GET_UNICORNS = gql`
-query GetUniversity {
-  universities {
-    id
-    slug
-    name
-    location
-    campusImage {
-			url
+  query GetUniversity {
+    universities {
+      id
+      slug
+      name
+      location
+      campusImage {
+        url
+      }
+      hasCourses {
+        id
+        courseCode
+        courseTitle
+      }
     }
-    hasCourses {
+    courses {
       id
       courseCode
       courseTitle
-    }
-  },
-  courses {
-    id
-    courseCode
-    courseTitle
-    courseRating {
-      ratingType
-      rating
-    }
-    courseAt{
-      slug
-      name
+      courseRating {
+        ratingType
+        rating
+      }
+      courseAt {
+        slug
+        name
+      }
     }
   }
-}
-`
+`;
 
+const GET_REVIEWS = gql`
+  {
+    reviews {
+      reviewSummary
+      reviewBy {
+        username
+        attendsUniversity {
+          slug
+        }
+      }
+    }
+  }
+`;
 
-
-
-
-
-export { GET_UNICORNS }
+export { GET_UNICORNS, GET_REVIEWS };

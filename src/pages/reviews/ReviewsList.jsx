@@ -1,21 +1,7 @@
 import React from "react";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { motion } from "framer-motion";
-
-// graphql query
-const reviews = gql`
-  {
-    reviews {
-      reviewSummary
-      reviewBy {
-        username
-        attendsUniversity {
-          slug
-        }
-      }
-    }
-  }
-`;
+import { GET_REVIEWS } from "../../graphql/queries";
 
 // show revie author
 const ReviewBy = ({ reviewBy }) => {
@@ -33,7 +19,7 @@ const ReviewBy = ({ reviewBy }) => {
 // show {@Anon tag} if no username available
 const ReviewsList = () => {
   // query data
-  const { loading, error, data } = useQuery(reviews);
+  const { loading, error, data } = useQuery(GET_REVIEWS);
 
   console.log(data);
 
