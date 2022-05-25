@@ -2,6 +2,7 @@ import React from "react";
 import { Layout } from "../../components";
 import { useQuery } from "@apollo/client";
 import { GET_UNICORNS } from "../../graphql/queries";
+import StepIndicator from "../../components/StepIndicator";
 
 const WriteReview = () => {
 
@@ -27,6 +28,7 @@ const WriteReview = () => {
       <Layout>
         <h1> Write your reviews here </h1>
         <div className="flex flex-row justify-around">
+
             <select value={uni} onChange={ (e) => (setUni(e.target.value)) }>
                 <option value="">Select University</option>
                 { 
@@ -47,10 +49,13 @@ const WriteReview = () => {
                     )
                 }
             </select>
+
+        </div>
+        
+        <div className="mt-12">
+            <StepIndicator />
         </div>
 
-
-            <p>You selected {uni}</p>
       </Layout>
     </>
   );
