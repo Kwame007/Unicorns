@@ -31,12 +31,12 @@ function Step1() {
             <div className="flex flex-col max-w-4xl mx-auto space-y-12 mt-20 items-center">
 
         {/* rating course */}
-            <div className="flex w-full">
+            <div className="w-full flex flex-col space-y-5 md:flex-row md:space-y-0">
                 <div className="flex flex-col flex-1 text-left">
                     <h2 className="text-2xl text-slate-700 font-semibold">Rate the <span className="text-indigo-400">course</span></h2>
-                    <p className="text-md leading-5">How did you find the execution and delivery of the course and course materials?</p>
+                    <p className="max-w-md text-md leading-5">How did you find the execution and delivery of the course and course materials?</p>
                 </div>
-                <div className="flex flex-1 justify-end">
+                <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
                         <RatingButton setRating={ rating => setCourseRating(rating)}/>
                     </div>
@@ -44,12 +44,12 @@ function Step1() {
             </div>
 
         {/* rating faculty */}
-            <div className="flex w-full">
+            <div className="w-full flex flex-col space-y-5 md:flex-row md:space-y-0">
                 <div className="flex flex-col flex-1 text-left">
                     <h2 className="text-2xl text-slate-700 font-semibold">Rate the <span className="text-indigo-400">faculty</span></h2>
-                    <p className="text-md leading-5">How did you find the faculty? Did it provide adequate support and information??</p>
+                    <p className="max-w-md text-md leading-5">How did you find the faculty? Did it provide adequate support and information??</p>
                 </div>
-                <div className="flex flex-1 justify-end">
+                <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
                         <RatingButton setRating={rating => setFacultyRating(rating)}/>
                     </div>
@@ -57,12 +57,12 @@ function Step1() {
             </div>
 
         {/* rating facilities */}
-            <div className="flex w-full">
+            <div className="w-full flex flex-col space-y-5 md:flex-row md:space-y-0">
                 <div className="flex flex-col flex-1 text-left">
                     <h2 className="text-2xl text-slate-700 font-semibold">Rate the <span className="text-indigo-400">facilities</span></h2>
-                    <p className="text-md leading-5">Did the facilities within the school meet your expectation?</p>
+                    <p className="max-w-md text-md leading-5">Did the facilities within the school meet your expectation?</p>
                 </div>
-                <div className="flex flex-1 justify-end">
+                <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
                         <RatingButton setRating={rating => setFacilityRating(rating)}/>
                     </div>
@@ -70,12 +70,12 @@ function Step1() {
             </div>
 
         {/* rating recommendations */}
-            <div className="flex w-full">
+            <div className="w-full flex flex-col space-y-5 md:flex-row md:space-y-0">
                 <div className="flex flex-col flex-1 text-left">
                     <h2 className="text-2xl text-slate-700 font-semibold">Rate the <span className="text-indigo-400">recommnedation</span></h2>
-                    <p className="text-md leading-5">Taking everything into consideration, are you able to recommend this institution to anyone?</p>
+                    <p className="max-w-md text-md leading-5">Taking everything into consideration, are you able to recommend this institution to anyone?</p>
                 </div>
-                <div className="flex flex-1 justify-end">
+                <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
                         <RatingButton setRating={rating => setRecommendationRating(rating)}/>
                     </div>
@@ -83,7 +83,7 @@ function Step1() {
             </div>
 
             </div> 
-            <p className="text-2xl mt-10 font-normal">
+            <p className="text-2xl mt-10 mb-10 font-normal">
                 Your Overall Rating : <b className="tracking-widest text-4xl text-black font-bold"><span className="text-indigo-500">{overallRating}</span>/5<span className="text-yellow-400">★</span></b>
             </p>
         </>
