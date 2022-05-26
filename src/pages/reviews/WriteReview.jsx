@@ -26,16 +26,17 @@ const WriteReview = () => {
   return (
     <>
       <Layout>
-        <h1> Write your reviews here </h1>
-        <div className="flex flex-row justify-around">
+        <h1 className="text-left px-6 mt-10 text-3xl font-bold mx-auto max-w-4xl"> Write your reviews here </h1>
+        <div className="px-6 flex flex-col space-y-8 mx-auto my-12 justify-between max-w-4xl md:flex-row md:space-y-0">
 
-            <select value={uni} onChange={ (e) => (setUni(e.target.value)) }>
+            <select className="w-full p-2 text-xl font-semibold text-black border-2 border-black md:w-1/2" value={uni} onChange={ (e) => (setUni(e.target.value)) }>
                 <option value="">Select University</option>
                 { 
                     uniData && ( uniData.map( ({name, slug}, index) => ( <option key={index} value={slug}>{name}</option>) ) )
                 }
             </select>
-            <select value={course} onChange={ (e) => (setCourse(e.target.value)) }>
+
+            <select className="w-full p-2 text-xl font-semibold text-black border-2 border-black md:w-1/2 md:ml-2" value={course} onChange={ (e) => (setCourse(e.target.value)) }>
                 <option>Select Course</option>
                 {
                     uni
@@ -52,7 +53,7 @@ const WriteReview = () => {
 
         </div>
         
-        <div className="mt-12">
+        <div className="mt-12 px-6">
             <StepIndicator />
         </div>
 
