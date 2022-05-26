@@ -2,16 +2,29 @@ import React, { useState, useRef, useEffect } from 'react'
 import { RatingButton } from '../components'
 
 
-function Step1(props) {
+function Step1() {
 
-    //const rating = useRef(0)
-    const [ rateCount, setRateCount ] = useState(0)
+    const [ overallRating, setOverallRating ] = useState(0)
 
-    const [ facultyRating, setFactultyRating ] = useState(0)
+    const [ courseRating, setCourseRating ] = useState(0)
+    const [ facultyRating, setFacultyRating ] = useState(0)
+    const [ facilityRating, setFacilityRating ] = useState(0)
+    const [ recommendationRating, setRecommendationRating ] = useState(0)
+
+    function averageRating([...n]) {
+        const sum = [...n].reduce((prev, curr) => prev + curr)
+        const avg = sum/[...n].length
+        if (!avg.isInteger && avg % 1 !== 0){
+            return avg.toFixed(1)
+        } else {
+            return avg
+        }
+    }
 
     useEffect( () => {
-        console.log(props.rating)
-    },[props.rating])
+        setOverallRating(averageRating([courseRating, facultyRating, facilityRating, recommendationRating]))
+    })
+    
     
     return(
         <>
@@ -25,7 +38,7 @@ function Step1(props) {
                 </div>
                 <div className="flex flex-1 justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
-                        <RatingButton value={props.rating} />
+                        <RatingButton setRating={ rating => setCourseRating(rating)}/>
                     </div>
                 </div>
             </div>
@@ -34,11 +47,11 @@ function Step1(props) {
             <div className="flex w-full">
                 <div className="flex flex-col flex-1 text-left">
                     <h2 className="text-2xl text-slate-700 font-semibold">Rate the <span className="text-indigo-400">faculty</span></h2>
-                    <p className="text-md leading-5">How did you find faculty? Did it provide adequate support and information??</p>
+                    <p className="text-md leading-5">How did you find the faculty? Did it provide adequate support and information??</p>
                 </div>
                 <div className="flex flex-1 justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
-                        <RatingButton />
+                        <RatingButton setRating={rating => setFacultyRating(rating)}/>
                     </div>
                 </div>
             </div>
@@ -51,7 +64,7 @@ function Step1(props) {
                 </div>
                 <div className="flex flex-1 justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
-                        <RatingButton />
+                        <RatingButton setRating={rating => setFacilityRating(rating)}/>
                     </div>
                 </div>
             </div>
@@ -64,13 +77,15 @@ function Step1(props) {
                 </div>
                 <div className="flex flex-1 justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
-                        <RatingButton />
+                        <RatingButton setRating={rating => setRecommendationRating(rating)}/>
                     </div>
                 </div>
             </div>
 
             </div> 
-            <p className="text-5xl mt-10 font-medium">{props.rating} | {rateCount}</p>
+            <p className="text-2xl mt-10 font-normal">
+                Your Overall Rating : <b className="tracking-widest text-4xl text-black font-bold"><span className="text-indigo-500">{overallRating}</span>/5<span className="text-yellow-400">★</span></b>
+            </p>
         </>
     )
 }
