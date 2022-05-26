@@ -26,7 +26,7 @@ const WriteReview = () => {
   return (
     <>
       <Layout>
-        <h1 className="text-left px-6 mt-10 text-3xl font-bold mx-auto max-w-4xl"> Write your reviews here </h1>
+        <h1 className="text-left px-6 mt-10 text-3xl font-bold mx-auto max-w-4xl"> Add your review</h1>
         <div className="px-6 flex flex-col space-y-8 mx-auto my-12 justify-between max-w-4xl md:flex-row md:space-y-0">
 
             <select className="w-full p-2 text-xl font-semibold text-black border-2 border-black md:w-1/2" value={uni} onChange={ (e) => (setUni(e.target.value)) }>
@@ -53,7 +53,7 @@ const WriteReview = () => {
 
         </div>
         
-        <div className="mt-12 px-6">
+        <div className="my-12 px-6">
             <StepIndicator />
         </div>
 
