@@ -1,5 +1,5 @@
-import React, {useState, useRef} from 'react'
-import { RatingButton } from './RatingButton'
+import React, {useState, useRef, useEffect} from 'react'
+import RatingButton from './RatingButton'
 
 function Step1() {
 
