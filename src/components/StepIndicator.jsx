@@ -4,6 +4,7 @@ import { Step1 } from '../components'
 const StepIndicator = () => {
 
     const [ active, setIsActive ] = useState(false)
+    const [ completed, setIsCompleted ] = useState(false)
 
     return (
         <div>
