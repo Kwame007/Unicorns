@@ -8,3 +8,5 @@ export { Layout, RatingButton, Step1, StepIndicator  }
 
 //add new components
 forms
+step2 input field forms for Pros Cons Summary
+step3 forms for Alumni, and user or anonymous 
