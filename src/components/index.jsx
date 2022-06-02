@@ -10,3 +10,5 @@ export { Layout, RatingButton, Step1, StepIndicator  }
 forms
 step2 input field forms for Pros Cons Summary
 step3 forms for Alumni, and user or anonymous 
+
+//add submit button to step indicator component
