@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Step1 } from '../components'
+import { Step1, Step2 } from '../components'
 
 const StepIndicator = () => {
 
@@ -21,13 +21,13 @@ const StepIndicator = () => {
             <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 4 </li>
         </ul>
 
-        {/* step 1 */}
-        <div> 
+        {/* step 1 */} <div> 
             <Step1 />
         </div>
 
         {/* step 2 */}
         <div>
+            <Step2 />
         </div>
  
         {/* step 3 */}
