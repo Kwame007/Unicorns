@@ -26,7 +26,7 @@ const WriteReview = () => {
     <>
       <Layout>
         <h1 className="text-left px-6 mt-10 text-3xl font-bold mx-auto max-w-4xl"> Add your review</h1>
-        <div className="px-6 flex flex-col space-y-8 mx-auto my-12 justify-between max-w-4xl md:flex-row md:space-y-0">
+        <div className="px-6 flex flex-col space-y-8 mx-auto my-12 justify-between max-w-4xl gap-x-0 md:gap-x-4 md:flex-row md:space-y-0">
 
             <select className="w-full p-2 text-xl font-semibold text-black border-2 border-black md:w-1/2" value={uni} onChange={ (e) => (setUni(e.target.value)) }>
                 <option value="">Select University</option>
@@ -35,7 +35,7 @@ const WriteReview = () => {
                 }
             </select>
 
-            <select className="w-full p-2 text-xl font-semibold text-black border-2 border-black md:w-1/2 md:ml-2" value={course} onChange={ (e) => (setCourse(e.target.value)) }>
+            <select className="w-full p-2 text-xl font-semibold text-black border-2 border-black md:w-1/2" value={course} onChange={ (e) => (setCourse(e.target.value)) }>
                 <option>Select Course</option>
                 {
                     uni
