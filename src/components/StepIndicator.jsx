@@ -42,7 +42,7 @@ const StepIndicator = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-            <input type="submit" value={`Submit`} className="w-full px-5 py-2 bg-indigo-500 font-semibold text-xl text-white uppercase " onClick={() => console.log(`Next/Submitted`)}/>
+            <input type="submit" value={`Submit`} className="w-full px-5 py-2 bg-indigo-500 font-semibold text-xl text-white uppercase cursor-pointer" onClick={() => console.log(`Next/Submitted`)}/>
         </div>
 
         </div>     
