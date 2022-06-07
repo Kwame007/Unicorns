@@ -1,8 +1,7 @@
 import React from "react";
-import { Layout } from "../../components";
+import { Layout, StepIndicator } from "../../components";
 import { useQuery } from "@apollo/client";
 import { GET_UNICORNS } from "../../graphql/queries";
-import StepIndicator from "../../components/StepIndicator";
 
 const WriteReview = () => {
 
