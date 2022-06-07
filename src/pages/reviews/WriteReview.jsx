@@ -54,7 +54,7 @@ const WriteReview = () => {
         </div>
         
         <div className="my-12 px-6">
-            <StepIndicator />
+  
         </div>
 
       </Layout>
