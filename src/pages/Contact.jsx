@@ -8,6 +8,7 @@ const Contact = () => {
         <>
             <Layout>
                 <h1> You can contact us on</h1> 
+                <p> UpdTe this page with more info</p>
             </Layout>
         </>
         )
