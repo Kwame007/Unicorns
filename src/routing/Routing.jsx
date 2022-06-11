@@ -10,9 +10,7 @@ export default function Routing() {
                 <Route index element={<Home />} />
 
                 <Route path='/reviews'>
-                    //Put reviews route here: To display list of reviews
-        
-                    
+                    //Put reviews route here: To display list of reviews 
                     <Route path='write-review' element={<WriteReview /> } />
                     <Route path='write-uni-review' element={<WriteUniReview /> } />
                     <Route path='write-course-review' element={<WriteCourseReview /> } />
