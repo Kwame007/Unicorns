@@ -11,3 +11,5 @@ export { Layout, RatingButton, Step1, Step2, StepIndicator  }
 //add submit button to step indicator component
  
 //redux store config  
+
+//redux state and components hookup
