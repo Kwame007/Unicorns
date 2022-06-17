@@ -1,8 +1,11 @@
 import React, {useState, useRef, useEffect} from 'react'
 import RatingButton from './RatingButton'
+import { useDispatch } from 'react-redux'
+import {ratingCourse, ratingFactilities, ratingFaculty, ratingRecommendation} from '../features/review/reviewSlice'
 
 function Step1() {
 
+    const dispatch = useDispatch()
     const [ overallRating, setOverallRating ] = useState(0)
 
     const [ courseRating, setCourseRating ] = useState(0)
@@ -44,7 +47,7 @@ function Step1() {
                 </div>
                 <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
-                        <RatingButton setRating={ rating => setCourseRating(rating)}/>
+                        <RatingButton setRating={ rating => { setCourseRating(rating); dispatch(ratingCourse(rating)) } }/>
                     </div>
                 </div>
             </div>
@@ -57,7 +60,7 @@ function Step1() {
                 </div>
                 <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
-                        <RatingButton setRating={rating => setFacultyRating(rating)}/>
+                        <RatingButton setRating={rating => { setFacultyRating(rating); dispatch(ratingFaculty(rating)) }}/>
                     </div>
                 </div>
             </div>
@@ -70,7 +73,7 @@ function Step1() {
                 </div>
                 <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
-                        <RatingButton setRating={rating => setFacilityRating(rating)}/>
+                        <RatingButton setRating={rating => { setFacilityRating(rating); dispatch(ratingFactilities(rating) )}}/>
                     </div>
                 </div>
             </div>
@@ -83,7 +86,7 @@ function Step1() {
                 </div>
                 <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
-                        <RatingButton setRating={rating => setRecommendationRating(rating)}/>
+                        <RatingButton setRating={rating => { setRecommendationRating(rating); dispatch(ratingRecommendation(rating)) }}/>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,10 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import {setPros} from '../features/review/reviewSlice'
 
 const Step2 = () => {
+
+    const dispatch = useDispatch()
 
     return (
         <>
@@ -10,7 +14,7 @@ const Step2 = () => {
                 <div className="w-full flex flex-col space-y-6 md:space-y-0 md:flex-row md:gap-x-4"> 
                     <div className="flex-1">
                         <p className="max-w-md text-left pt-2 text-lg text-slate-500 font-normal leading-5">Write about positive experiences you had while in this university. Short, concise and helpful information.</p>
-                        <input className="w-full mt-4 px-5 py-2 border-2 border-black focus:outline-indigo-500 focus:ring-indigo-200 focus:ring-2 text-xl  placeholder:font-semibold placeholder:text-slate-500 placeholder:text-xl" type="text" placeholder="Pros"/>
+                        <input className="w-full mt-4 px-5 py-2 border-2 border-black focus:outline-indigo-500 focus:ring-indigo-200 focus:ring-2 text-xl  placeholder:font-semibold placeholder:text-slate-500 placeholder:text-xl" type="text" placeholder="Pros" onSubmit={ (e) => {  console.log(e.target.value) }}/>
                     </div>
                     <div className="flex-1"> 
                         <p className="max-w-md text-left pt-0  md:pt-2 text-lg text-slate-500 font-normal leading-5">Write your negative experiences you had while in this university. Short, concise and helpful information.</p>
