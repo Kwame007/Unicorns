@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Step1, Step2 } from '../components'
+import { Step1, Step2, Step3, Step4 } from '../components'
 
 const StepIndicator = () => {
 
@@ -21,8 +21,9 @@ const StepIndicator = () => {
             <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 4 </li>
         </ul>
 
-        {/* step 1 */} <div> 
-            <Step1 />
+        {/* step 1 */} 
+        <div> 
+            <Step1 />     
         </div>
 
         {/* step 2 */}
@@ -32,13 +33,19 @@ const StepIndicator = () => {
  
         {/* step 3 */}
         <div>
+            <Step3 />
         </div>
 
         {/* step 4 */}
         <div>
+            <Step4 />
         </div>
-        
+
+        <div className="max-w-4xl mx-auto">
+            <input type="submit" value={`Submit`} className="w-full px-5 py-2 bg-indigo-500 font-semibold text-xl text-white uppercase cursor-pointer" onClick={() => console.log(`Next/Submitted`)}/>
         </div>
+
+        </div>     
     )
 }
 

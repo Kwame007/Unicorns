@@ -40,7 +40,7 @@ function Step1() {
             <div className="w-full flex flex-col space-y-5 md:flex-row md:space-y-0">
                 <div className="flex flex-col flex-1 text-left">
                     <h2 className="text-2xl text-black font-semibold">Rate the <span className="text-indigo-500">course</span></h2>
-                    <p className="max-w-md pt-2 text-lg text-slate-800 font-normal leading-5">How did you find the execution and delivery of the course and course materials?</p>
+                    <p className="max-w-md pt-2 text-lg text-slate-500 font-normal leading-5">How did you find the execution and delivery of the course and course materials?</p>
                 </div>
                 <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
@@ -53,7 +53,7 @@ function Step1() {
             <div className="w-full flex flex-col space-y-5 md:flex-row md:space-y-0">
                 <div className="flex flex-col flex-1 text-left">
                     <h2 className="text-2xl text-black font-semibold">Rate the <span className="text-indigo-500">faculty</span></h2>
-                    <p className="max-w-md pt-2 text-lg text-slate-800 font-normal leading-5">How did you find the faculty? Did it provide adequate support and information??</p>
+                    <p className="max-w-md pt-2 text-lg text-slate-500 font-normal leading-5">How did you find the faculty? Did it provide adequate support and information??</p>
                 </div>
                 <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
@@ -66,7 +66,7 @@ function Step1() {
             <div className="w-full flex flex-col space-y-5 md:flex-row md:space-y-0">
                 <div className="flex flex-col flex-1 text-left">
                     <h2 className="text-2xl text-black font-semibold">Rate the <span className="text-indigo-500">facilities</span></h2>
-                    <p className="max-w-md pt-2 text-lg text-slate-800 font-normal leading-5">Did the facilities within the school meet your expectation?</p>
+                    <p className="max-w-md pt-2 text-lg text-slate-500 font-normal leading-5">Did the facilities within the school meet your expectation?</p>
                 </div>
                 <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
@@ -79,7 +79,7 @@ function Step1() {
             <div className="w-full flex flex-col space-y-5 md:flex-row md:space-y-0">
                 <div className="flex flex-col flex-1 text-left">
                     <h2 className="text-2xl text-black font-semibold">Rate the <span className="text-indigo-500">recommnedation</span></h2>
-                    <p className="max-w-md pt-2 text-lg text-slate-800 font-normal leading-5">Taking everything into consideration, are you able to recommend this institution to anyone?</p>
+                    <p className="max-w-md pt-2 text-lg text-slate-500 font-normal leading-5">Taking everything into consideration, are you able to recommend this institution to anyone?</p>
                 </div>
                 <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
