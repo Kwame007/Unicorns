@@ -7,7 +7,8 @@ const Home = () => {
     <>
       <Layout>
         <header className="App-header">
-          {/* <p className="text-7xl">testing</p> */}
+          {/* <p className="text-7xl">testing</p> 
+          - update with redux */}
         </header>
         <ReviewsList />
       </Layout>
