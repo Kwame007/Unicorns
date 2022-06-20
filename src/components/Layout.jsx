@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 
 //header
 function Header() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
@@ -61,6 +61,7 @@ function Footer() {
   return <></>;
 }
 
+//page layout order
 const Layout = ({ children }) => {
   return (
     <div>
