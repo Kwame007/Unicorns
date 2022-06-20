@@ -6,10 +6,12 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 import StepIndicator from "./StepIndicator";
 
-export { Layout, RatingButton, Step1, Step2, Step3, Step4, StepIndicator  } 
- 
+export { Layout, RatingButton, Step1, Step2, Step3, Step4, StepIndicator };
+
 //add submit button to step indicator component
- 
-//redux store config  
+
+//redux store config
 
 //redux state and components hookup
+
+//NB: this index file imporots all the components and exports tghem
