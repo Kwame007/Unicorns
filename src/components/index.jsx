@@ -8,10 +8,12 @@ import StepIndicator from "./StepIndicator";
 
 export { Layout, RatingButton, Step1, Step2, Step3, Step4, StepIndicator };
 
+
+
+// Add uni and course inputs to global state
+
 //add submit button to step indicator component
 
-//redux store config
+// Work on step indicator component  
 
-//redux state and components hookup
-
-//NB: this index file imporots all the components and exports tghem
+// Post review to backend 
