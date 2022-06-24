@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    university: 'university',
+    university: 'uni',
     course: 'course',
     overallRating: 0,
     courseRating: 0,
@@ -23,7 +23,7 @@ export const reviewSlice = createSlice({
         setUniversity: (state, action) => {
             state.university = action.payload
         },
-        course: (state, action) => {
+        selectedCourse: (state, action) => {
             state.course = action.payload
         },
         overallRating: (state, action) => {
@@ -59,5 +59,5 @@ export const reviewSlice = createSlice({
     },
 })
 
-export const { setUniversity, course, ratingCourse, ratingFaculty, ratingFactilities, ratingRecommendation, setPros, setCons, setGradYear, isAnonTrue, setAlias } = reviewSlice.actions
+export const { setUniversity, selectedCourse, ratingCourse, ratingFaculty, ratingFactilities, ratingRecommendation, setPros, setCons, setGradYear, isAnonTrue, setAlias } = reviewSlice.actions
 export default reviewSlice.reducer
