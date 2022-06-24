@@ -7,7 +7,7 @@ const Step4 = () => {
     return (
         <>
             <div className="max-w-4xl my-12 mx-auto">
-                <h2 className="w-full text-left text-3xl text-black font-bold">You are about to submit your review entry for the <span className="text-indigo-500">[course]</span> at the <span className="text-indigo-500">[university] </span>:</h2>
+                <h2 className="w-full text-left text-3xl text-black font-bold">You are about to submit your review entry for the <span className="text-indigo-500">{data.course}</span> course at the <span className="text-indigo-500">{data.university} </span> university:</h2>
 
                 <div className="w-full bg-gray-100 px-5 py-4 mt-4">
                     <div className="flex justify-between flex-col md:flex-row">
