@@ -1,8 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const RatingButton = (props) => {
-  // const rating = useRef(0);
-  // const [rateCount, setRateCount] = useState(0);
 
   const rating = useRef(0);
   const [rateCount, setRateCount] = useState(0);
@@ -21,7 +19,6 @@ const RatingButton = (props) => {
         onMouseOver={() => setRateCount(1)}
         onMouseOut={() => setRateCount(0)}
       >
-        {" "}
         <span>★</span>
       </button>
       <button
@@ -36,7 +33,6 @@ const RatingButton = (props) => {
         onMouseOver={() => setRateCount(2)}
         onMouseOut={() => setRateCount(0)}
       >
-        {" "}
         <span>★</span>
       </button>
       <button
@@ -51,7 +47,6 @@ const RatingButton = (props) => {
         onMouseOver={() => setRateCount(3)}
         onMouseOut={() => setRateCount(0)}
       >
-        {" "}
         <span>★</span>
       </button>
       <button
@@ -66,7 +61,6 @@ const RatingButton = (props) => {
         onMouseOver={() => setRateCount(4)}
         onMouseOut={() => setRateCount(0)}
       >
-        {" "}
         <span>★</span>
       </button>
       <button
@@ -81,7 +75,6 @@ const RatingButton = (props) => {
         onMouseOver={() => setRateCount(5)}
         onMouseOut={() => setRateCount(0)}
       >
-        {" "}
         <span>★</span>
       </button>
     </>
