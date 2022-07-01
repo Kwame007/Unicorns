@@ -15,19 +15,23 @@ const Step4 = () => {
 
                             <p className="text-left font-black text-3xl">Ratings</p> 
                             <div className="flex flex-col sm:items-center sm:flex-row">
-                                <p className="text-left text-xl">Course rating - &nbsp; </p><span className="text-left pl-0 font-semibold text-2xl sm:pl-2"> {data.courseRating}/5 stars </span>
+                                <p className="text-left text-xl">Course rating - &nbsp; </p><span className="text-left pl-0 font-semibold text-2xl sm:pl-2"> {data.courseRating}/5<span className="text-yellow-400">★</span></span>
                             </div>
 
                             <div className="flex flex-col sm:flex-row sm:items-center">
-                                <p className="text-left text-xl">Faculty rating - &nbsp; </p><span className="text-left pl-0 font-semibold text-2xl sm:pl-2"> {data.facultyRating}/5 stars </span>
+                                <p className="text-left text-xl">Faculty rating - &nbsp; </p><span className="text-left pl-0 font-semibold text-2xl sm:pl-2"> {data.facultyRating}/5<span className="text-yellow-400">★</span> </span>
                             </div>
 
                             <div className="flex flex-col sm:flex-row sm:items-center">
-                                <p className="text-left text-xl">Facilities rating - &nbsp; </p><span className="text-left pl-0 sm:pl-2 font-semibold text-2xl"> {data.facilitiesRating}/5 stars </span>
+                                <p className="text-left text-xl">Facilities rating - &nbsp; </p><span className="text-left pl-0 sm:pl-2 font-semibold text-2xl"> {data.facilitiesRating}/5<span className="text-yellow-400">★</span> </span>
                             </div>
 
                             <div className="flex flex-col sm:flex-row sm:items-center">
-                                <p className="text-left text-xl">Recommendation rating - &nbsp; </p><span className="text-left pl-0 sm:pl-2 font-semibold text-2xl"> {data.recommendationRating}/5 stars </span>
+                                <p className="text-left text-xl">Recommendation rating - &nbsp; </p><span className="text-left pl-0 sm:pl-2 font-semibold text-2xl"> {data.recommendationRating}/5<span className="text-yellow-400">★</span> </span>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row sm:items-center">
+                                <p className="text-left text-xl font-medium">Overall rating - &nbsp; </p><span className="tracking-widest text-4xl text-black font-bold"> <span className="text-indigo-500">{data.overallRating}</span>/5<span className="text-yellow-400">★</span></span>                             
                             </div>
 
                         </div>                         
@@ -36,7 +40,7 @@ const Step4 = () => {
                             <p className="text-left font-black text-3xl">Year</p>
                             <div className="flex flex-col">
                                 <p className="text-left text-xl">Graduation year :</p> <span className="p-2 max-w-min max-h-min bg-indigo-300 text-white font-semibold">{data.gradYear}</span>
-                                <p className="text-left text-xl">Anonymous review :</p> <span className="p-2 max-w-min max-h-min bg-indigo-300 text-white font-semibold">{data.isAnon !== false?'Yes':'No'}</span>
+                                <p className="text-left text-xl">Review By :</p> <span className="p-2 max-w-max max-h-min bg-indigo-300 text-white font-semibold">{data.isAnon !== false?'Anonymous User':`${data.alias}`}</span>
                             </div>
                         </div>
                     </div>
