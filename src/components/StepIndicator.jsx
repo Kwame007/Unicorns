@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Step1, Step2, Step3, Step4 } from '../components'
 
-const StepIndicator = () => {
-
-    const [ active, setIsActive ] = useState(false)
-    const [ completed, setIsCompleted ] = useState(false)
+const StepIndicator = (props) => {
 
     return (
         <div>
@@ -13,7 +10,14 @@ const StepIndicator = () => {
             step 2: Comments. Pros, Cons, Suggestions, Review Summary
             step 3: Alumni year. Your year of graduation or completion
             step 4: Review all provided/submitted info
+
+        <ul className="flex justify-center max-w-4xl mx-auto text-2xl space-x-9">
+            <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 2 </li>
+            <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 3 </li>
+            <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 4 </li>
+        </ul>
             */}
+
         <ul className="flex justify-center max-w-4xl mx-auto text-2xl space-x-9">
             <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 1 </li>
             <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 2 </li>
