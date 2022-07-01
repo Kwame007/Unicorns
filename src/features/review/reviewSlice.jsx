@@ -26,7 +26,7 @@ export const reviewSlice = createSlice({
         selectedCourse: (state, action) => {
             state.course = action.payload
         },
-        overallRating: (state, action) => {
+        ratingOverall: (state, action) => {
             state.overallRating = action.payload
         },
         ratingCourse: (state, action) => {
@@ -47,10 +47,13 @@ export const reviewSlice = createSlice({
         setCons: (state, action) => {
             state.cons = action.payload
         }, 
+        setReviewSummary: (state, action) => {
+            state.reviewSummary = action.payload
+        },
         setGradYear: (state, action) => {
             state.gradYear = action.payload
         },
-        isAnonTrue: (state, action) => {
+        isAnonTrue: (state) => {
             state.isAnon = !state.isAnon
         },
         setAlias: (state, action) => {
@@ -59,5 +62,5 @@ export const reviewSlice = createSlice({
     },
 })
 
-export const { setUniversity, selectedCourse, ratingCourse, ratingFaculty, ratingFactilities, ratingRecommendation, setPros, setCons, setGradYear, isAnonTrue, setAlias } = reviewSlice.actions
+export const { setUniversity, selectedCourse, ratingCourse, ratingFaculty, ratingFactilities, ratingRecommendation, ratingOverall, setPros, setCons, setReviewSummary, setGradYear, isAnonTrue, setAlias } = reviewSlice.actions
 export default reviewSlice.reducer
