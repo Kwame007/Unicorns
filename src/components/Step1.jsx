@@ -1,7 +1,7 @@
 import React, {useState, useRef, useEffect} from 'react'
 import RatingButton from './RatingButton'
 import { useDispatch } from 'react-redux'
-import {ratingCourse, ratingFactilities, ratingFaculty, ratingRecommendation} from '../features/review/reviewSlice'
+import {ratingCourse, ratingFactilities, ratingFaculty, ratingRecommendation, ratingOverall} from '../features/review/reviewSlice'
 
 function Step1() {
 
@@ -26,7 +26,8 @@ function Step1() {
     }
 
     useEffect( () => {
-        setOverallRating(averageRating([courseRating, facultyRating, facilityRating, recommendationRating]))
+        setOverallRating(averageRating([courseRating, facultyRating, facilityRating, recommendationRating]));
+        dispatch(ratingOverall(overallRating))
     })
 
     useEffect( () => {
