@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react'
 
 const RatingButton = (props) => {
+  const rating = useRef(0);
+  const [rateCount, setRateCount] = useState(0);
 
-    const rating = useRef(0)
-    const [ rateCount, setRateCount ] = useState(0)
- 
     return (
         <>
 
