@@ -9,6 +9,5 @@ import StepIndicator from "./StepIndicator";
 export { Layout, RatingButton, Step1, Step2, Step3, Step4, StepIndicator };
 
 
-// Work on Pros, Cons, Review Summary **
 // Work on step indicator component  
 // Post review to backend 
