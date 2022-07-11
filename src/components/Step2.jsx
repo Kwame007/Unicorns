@@ -11,7 +11,7 @@ const Step2 = () => {
 
     return (
         <>
-            <div className="max-w-4xl my-12 mx-auto">
+            <div className="max-w-4xl my-12 space-y-12 mx-auto">
             <form className="flex flex-col">
                 <h2 className="text-left text-2xl text-black font-semibold">Write your <span className="text-indigo-500">comment</span></h2>
                 <div className="w-full flex flex-col space-y-6 md:space-y-0 md:flex-row md:gap-x-4"> 
