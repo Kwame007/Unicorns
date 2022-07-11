@@ -38,8 +38,7 @@ function Step1() {
     
     return(
         <>
-            <div className="flex flex-col max-w-4xl mx-auto space-y-12 mt-20 items-center">
-
+            <div className="flex flex-col max-w-4xl mx-auto space-y-12 my-12 items-center">
         {/* rating course */}
             <div className="w-full flex flex-col space-y-5 md:flex-row md:space-y-0">
                 <div className="flex flex-col flex-1 text-left">
