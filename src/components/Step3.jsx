@@ -23,11 +23,11 @@ const Step3 = () => {
 
     return(
         <>
-            <div className="max-w-4xl space-y-6 my-12 mx-auto">
+            <div className="max-w-4xl space-y-12 my-12 mx-auto">
 
                 <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:items-center md:justify-between">
                     <h2 className="max-w-xl text-2xl font-semibold text-black text-left">Which year did you <span className="text-indigo-500">graduate</span>?<span className="text-sm font-normal text-slate-500 mx-0 block sm:mx-2  sm:inline-block">(Your alumni year group)</span></h2> 
-                    <select className="w-40 py-5 focus:border-1 focus:ring-2 focus:ring-indigo-200 focus:outline-indigo-500 text-xl font-black text-black md:ml-5 md:text-right" onChange={ e => { dispatch(setGradYear(e.target.value))  }}>
+                    <select className="w-40 focus:border-1 focus:ring-2 focus:ring-indigo-200 focus:outline-indigo-500 text-xl font-black text-black md:ml-5 md:text-right" onChange={ e => { dispatch(setGradYear(e.target.value))  }}>
                         <option className="">YYYY</option>
                         { years.map( (i, index) => (
                             <option key={index} value={i}>{i}</option>
