@@ -3,11 +3,10 @@ import { Step1, Step2, Step3, Step4 } from '../components'
 
 const StepIndicator = () => {
 
-    const i = 1;
     const [ curr, setCurr ] = useState(1)
     const [ isActive, setIsActive ] = useState(false)
 
-    function renderStep(step) {
+    const renderStep = useCallback((step) => {
 
             switch (step) {
                 case 1:
@@ -19,16 +18,16 @@ const StepIndicator = () => {
                 case 4:
                     return <Step4 />
             }
-    }
+    }, [])
 
-    function prevStep() {
+    const prevStep = useCallback(() => {
         if (curr != 1)
         setCurr(curr - 1)
-    }
+    }, [curr])
 
-    function nextStep() {
+    const nextStep = useCallback(() => {
         setCurr(curr + 1)
-    }
+    }, [curr])
 
     function submitReview() {}
 
