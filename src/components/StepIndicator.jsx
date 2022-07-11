@@ -1,10 +1,37 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { Step1, Step2, Step3, Step4 } from '../components'
 
 const StepIndicator = () => {
 
-    const [ active, setIsActive ] = useState(false)
-    const [ completed, setIsCompleted ] = useState(false)
+    const i = 1;
+    const [ curr, setCurr ] = useState(1)
+    const [ isActive, setIsActive ] = useState(false)
+
+    function renderStep(step) {
+
+            switch (step) {
+                case 1:
+                    return <Step1 />
+                case 2:
+                    return <Step2 />
+                case 3:
+                    return <Step3 />
+                case 4:
+                    return <Step4 />
+            }
+    }
+
+    function prevStep() {
+        if (curr != 1)
+        setCurr(curr - 1)
+    }
+
+    function nextStep() {
+        setCurr(curr + 1)
+    }
+
+    function submitReview() {}
+
 
     return (
         <div>
@@ -15,37 +42,31 @@ const StepIndicator = () => {
             step 4: Review all provided/submitted info
             */}
         <ul className="flex justify-center max-w-4xl mx-auto text-2xl space-x-9">
-            <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 1 </li>
-            <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 2 </li>
-            <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 3 </li>
-            <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full"> 4 </li>
+            <li className="text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full">
+               <button onClick={() => setCurr(1)}> 1 </button>  
+            </li>
+            <li className={`text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full`}>  
+               <button onClick={() => setCurr(2)}> 2 </button>  
+            </li>
+            <li className={`text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full`}>   
+               <button onClick={() => setCurr(3)}> 3 </button>  
+            </li>
+            <li className={`text-black font-medium bg-white w-9 h-9 border-2 border-black rounded-full`}> 
+               <button onClick={() => setCurr(4)}> 4 </button>  
+            </li>
         </ul>
 
-        {/* step 1 */} 
-        <div> 
-            <Step1 />     
-        </div>
+        <div className="w-full max-h-min mb-10">        
+        {
+            renderStep(curr)
+        }
+        </div>       
 
-        {/* step 2 */}
-        <div>
-            <Step2 />
+        <div className="flex max-w-4xl gap-4 mx-auto ">
+            <input type="submit" value={`Previous`} className="w-full px-5 py-2 bg-slate-400 font-semibold text-xl text-white uppercase cursor-pointer" onClick={() => prevStep() } />
+            <input type="submit" value={curr==4?`Submit`:`Next`} className="w-full px-5 py-2 bg-indigo-500 font-semibold text-xl text-white uppercase cursor-pointer" onClick={() => { if(curr == 4){submitReview()} else{ nextStep()} } } />
         </div>
- 
-        {/* step 3 */}
-        <div>
-            <Step3 />
         </div>
-
-        {/* step 4 */}
-        <div>
-            <Step4 />
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-            <input type="submit" value={`Submit`} className="w-full px-5 py-2 bg-indigo-500 font-semibold text-xl text-white uppercase cursor-pointer" onClick={() => console.log(`Next/Submitted`)}/>
-        </div>
-
-        </div>     
     )
 }
 
