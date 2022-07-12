@@ -6,6 +6,29 @@ const StepIndicator = () => {
     const [ curr, setCurr ] = useState(1)
     const [ isActive, setIsActive ] = useState(false)
 
+    const step = [
+        {
+            isActive: false,
+            completed: false,
+            component: <Step1 />,
+        },
+        {
+            isActive: false,
+            completed: false,
+            component: <Step2 />,
+        },
+        {
+            isActive: false,
+            completed: false,
+            component: <Step3 />,
+        },
+        {
+            isActive: false,
+            completed: false,
+            component: <Step4 />,
+        }
+    ]
+
     const renderStep = useCallback((step) => {
 
             switch (step) {
@@ -57,6 +80,9 @@ const StepIndicator = () => {
 
         <div className="w-full max-h-min mb-10">        
         {
+            step.map(({isActive, completed}, index) => {
+                return <p>{index}</p>
+            }),
             renderStep(curr)
         }
         </div>       
