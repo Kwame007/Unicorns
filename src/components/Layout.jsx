@@ -58,12 +58,17 @@ function Header() {
 
 //footer
 function Footer() {
-  const d = new Date()
+  const d = new Date();
   return (
-        <div className="w-full h-28 py-20 bg-red-50 flex flex-col justify-center">
-            <p className="font-black">Unicorns</p>  <span>All Rights Reserved &copy; {d.getFullYear()}</span> <p>&lt;Development lead=&quot;Clement&quot; junior=&quot;<a href="https://bawuahboakye.com">Bawuahboakye</a>&quot; /&gt;</p>
-        </div>
-  )
+    <div className="w-full h-28 py-20 bg-red-50 flex flex-col justify-center">
+      <p className="font-black">Unicorns</p>{" "}
+      <span>All Rights Reserved &copy; {d.getFullYear()}</span>{" "}
+      <p>
+        &lt;Development lead=&quot;Clement&quot; junior=&quot;
+        <a href="https://bawuahboakye.com">Bawuahboakye</a>&quot; /&gt;
+      </p>
+    </div>
+  );
 }
 
 //page layout order
