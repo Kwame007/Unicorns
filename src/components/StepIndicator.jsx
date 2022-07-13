@@ -5,33 +5,16 @@ const StepIndicator = () => {
 
     const [ curr, setCurr ] = useState(1)
     const [ isActive, setIsActive ] = useState(false)
-
-    const step = [
-        {
-            isActive: false,
-            completed: false,
-            component: <Step1 />,
-        },
-        {
-            isActive: false,
-            completed: false,
-            component: <Step2 />,
-        },
-        {
-            isActive: false,
-            completed: false,
-            component: <Step3 />,
-        },
-        {
-            isActive: false,
-            completed: false,
-            component: <Step4 />,
-        }
+    const steps = [
+        <Step1 />,
+        <Step2 />,
+        <Step3 />,
+        <Step4 />
     ]
 
-    const renderStep = useCallback((step) => {
+    const renderStep = useCallback(() => {
 
-            switch (step) {
+            switch (curr) {
                 case 1:
                     return <Step1 />
                 case 2:
@@ -41,16 +24,34 @@ const StepIndicator = () => {
                 case 4:
                     return <Step4 />
             }
-    }, [])
-
-    const prevStep = useCallback(() => {
-        if (curr != 1)
-        setCurr(curr - 1)
     }, [curr])
 
-    const nextStep = useCallback(() => {
+    const stepping = React.useMemo( () => {
+
+        if(curr == 1){
+            return <Step1 />
+        } else if (curr == 2) {
+            return <Step2 />
+        } else if (curr == 3) {
+            return <Step3 />
+        } else if (curr == 4) {
+            return <Step4 />
+        }
+
+    }, [curr])
+
+
+    const nextStep = () => {
         setCurr(curr + 1)
-    }, [curr])
+        console.log(curr)
+    }
+    
+    const prevStep = () => {
+        if(curr !== 0)
+        setCurr(curr - 1)
+        console.log(curr)
+    }
+
 
     function submitReview() {}
 
@@ -80,15 +81,13 @@ const StepIndicator = () => {
 
         <div className="w-full max-h-min mb-10">        
         {
-            step.map(({isActive, completed}, index) => {
-                return <p>{index}</p>
-            }),
-            renderStep(curr)
+            //steps.map( item => item )
+            //renderStep()
         }
         </div>       
 
         <div className="flex max-w-4xl gap-4 mx-auto ">
-            <input type="submit" value={`Previous`} className="w-full px-5 py-2 bg-slate-400 font-semibold text-xl text-white uppercase cursor-pointer" onClick={() => prevStep() } />
+            <input type="submit" value={`Previous`} className="w-full px-5 py-2 bg-slate-400 font-semibold text-xl text-white uppercase cursor-pointer" onClick={ () => prevStep() } />
             <input type="submit" value={curr==4?`Submit`:`Next`} className="w-full px-5 py-2 bg-indigo-500 font-semibold text-xl text-white uppercase cursor-pointer" onClick={() => { if(curr == 4){submitReview()} else{ nextStep()} } } />
         </div>
         </div>
