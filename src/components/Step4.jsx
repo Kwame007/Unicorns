@@ -40,7 +40,7 @@ const Step4 = () => {
                             <p className="text-left font-black text-3xl">Year</p>
                             <div className="flex flex-col">
                                 <p className="text-left text-xl">Graduation year :</p> <span className="p-2 max-w-min max-h-min bg-indigo-300 text-white font-semibold">{data.gradYear}</span>
-                                <p className="text-left text-xl">Review By :</p> <span className="p-2 max-w-max max-h-min bg-indigo-300 text-white font-semibold">{data.isAnon !== false?'Anonymous User':`${data.alias}`}</span>
+                                <p className="text-left text-xl">Review By :</p> <span className="p-2 max-w-max max-h-min bg-indigo-300 text-white font-semibold">{data.isAnon == true ?'Anonymous User':`${data.alias}`}</span>
                             </div>
                         </div>
                     </div>
