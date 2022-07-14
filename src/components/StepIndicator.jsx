@@ -26,30 +26,13 @@ const StepIndicator = () => {
             }
     }, [curr])
 
-    const stepping = React.useMemo( () => {
-
-        if(curr == 1){
-            return <Step1 />
-        } else if (curr == 2) {
-            return <Step2 />
-        } else if (curr == 3) {
-            return <Step3 />
-        } else if (curr == 4) {
-            return <Step4 />
-        }
-
-    }, [curr])
-
-
     const nextStep = () => {
         setCurr(curr + 1)
-        console.log(curr)
     }
     
     const prevStep = () => {
         if(curr !== 0)
         setCurr(curr - 1)
-        console.log(curr)
     }
 
 
@@ -81,8 +64,7 @@ const StepIndicator = () => {
 
         <div className="w-full max-h-min mb-10">        
         {
-            //steps.map( item => item )
-            //renderStep()
+            renderStep()
         }
         </div>       
 
