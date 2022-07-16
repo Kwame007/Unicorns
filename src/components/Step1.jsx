@@ -1,10 +1,11 @@
 import React, {useState, useRef, useEffect} from 'react'
 import RatingButton from './RatingButton'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {ratingCourse, ratingFactilities, ratingFaculty, ratingRecommendation, ratingOverall} from '../features/review/reviewSlice'
 
 function Step1() {
 
+    const userDate = useSelector( (state) => state.review) 
     const dispatch = useDispatch()
     const [ overallRating, setOverallRating ] = useState(0)
 
