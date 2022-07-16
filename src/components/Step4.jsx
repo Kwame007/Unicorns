@@ -47,9 +47,9 @@ const Step4 = () => {
                     <div className="mt-4">
                         <p className="text-left font-black text-3xl">Review summary</p>
                         <div className="py-4 space-y-2">
-                            <p className="text-left text-lg">Pros : <span className="">{data.pros}</span></p>
-                            <p className="text-left text-lg">Cons : <span className="">{data.cons}</span></p>
-                            <p className="text-left text-lg">Review Summary : <span className="">{data.reviewSummary}</span></p>
+                            <p className="text-left text-lg">Pros : <span className="font-medium">{data.pros}</span></p>
+                            <p className="text-left text-lg">Cons : <span className="font-medium">{data.cons}</span></p>
+                            <p className="text-left text-lg">Review Summary : <span className="font-medium">{data.reviewSummary}</span></p>
                         </div>
                     </div>
                 </div>
