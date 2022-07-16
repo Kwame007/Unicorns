@@ -42,7 +42,7 @@ const Step3 = () => {
                 </div>
                 <div className={isAnon?`hidden`:`flex flex-col space-y-6`}>
                     <h2 className="max-w-xl text-2xl font-semibold text-black text-left">What was your <span className="text-indigo-500">alias</span>?<span className="mx-0 text-sm font-normal text-slate-500 block sm:mx-2 sm:inline-block">(What your mates know you as)</span></h2>
-                    <input className="w-full px-5 py-2 text-xl border-2 border-black placeholder:text-slate-500 placeholder:text-xl placeholder:font-semibold md:w-10/12 focus:outline-indigo-500 focus:ring-2 focus:ring-indigo-200" placeholder="e.g Topaz" onChange={ (e) => { setAliasInput(e.target.value); (dispatch(setAlias(aliasInput)))} } ref={aliasRef}/>
+                    <input className="w-full px-5 py-2 text-xl border-2 border-black placeholder:text-slate-500 placeholder:text-xl placeholder:font-semibold md:w-10/12 focus:outline-indigo-500 focus:ring-2 focus:ring-indigo-200" placeholder="e.g Topaz" onChange={ (e) => dispatch(setAlias(e.target.value)) } value={userData.alias} ref={aliasRef}/>
                 </div>
 
             </div>
