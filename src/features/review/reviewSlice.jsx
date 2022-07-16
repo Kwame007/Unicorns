@@ -13,7 +13,7 @@ const initialState = {
     reviewSummary: '',
     gradYear: 2000,
     isAnon: false,
-    alias: 'alias',
+    alias: '',
 }
 
 export const reviewSlice = createSlice({
