@@ -1,15 +1,19 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const RatingButton = (props) => {
+
+  const rated = props.rated
   const rating = useRef(0);
   const [rateCount, setRateCount] = useState(0);
+
 
   return (
     <>
       <button
         onClick={() => props.setRating((rating.current = 1))}
         className={
-          rateCount === 0 && rating?.current >= 1
+          rateCount === 0 && rating?.current >= rated
+
             ? `text-yellow-400`
             : rateCount >= 1
             ? `text-yellow-400`

@@ -5,7 +5,7 @@ import {ratingCourse, ratingFactilities, ratingFaculty, ratingRecommendation, ra
 
 function Step1() {
 
-    const userDate = useSelector( (state) => state.review) 
+    const userData = useSelector( (state) => state.review) 
     const dispatch = useDispatch()
     const [ overallRating, setOverallRating ] = useState(0)
 
@@ -48,7 +48,7 @@ function Step1() {
                 </div>
                 <div className="flex flex-1 md:justify-end">
                     <div className="text-5xl text-gray-300 space-x-0.5">
-                        <RatingButton setRating={ rating => { setCourseRating(rating); dispatch(ratingCourse(rating)) } }/>
+                        <RatingButton rated={userData.courseRating} setRating={ rating => { setCourseRating(rating); dispatch(ratingCourse(rating)) } }/>
                     </div>
                 </div>
             </div>
